@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './BookList.css'
 
 const BookList = () => {
     const [books, setBook] = useState([]);
@@ -21,7 +22,7 @@ const BookList = () => {
 
     return (
         <div>
-            <Link to="/add" className="button is-primary mt-2">Add New</Link>
+            <Link to="/add" className="button-4">Masukkan Data Buku Baru</Link>
             <table className="table is-striped is-fullwidth">
                 <thead>
                     <tr>
@@ -38,10 +39,10 @@ const BookList = () => {
                             <td>{ index + 1 }</td>
                             <td>{ book.title }</td>
                             <td>{ book.year }</td>
-                            <td>{ book.avaibility.toString() }</td>
+                            <td>{ book.avaibility.toString() == 'true' ? 'YES' : 'NO' }</td>
                             <td>
                                 <Link to={`/edit/${book.id}`} className="button is-small is-info">Edit</Link>
-                                <button onClick={ () => deleteBook(book.id) } className="button is-small is-danger">Delete</button>
+                                <button onClick={ () => deleteBook(book.id) } className="deleteButton">Delete</button>
                             </td>
                         </tr>
                     )) }

@@ -1,3 +1,4 @@
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BookList from "./components/BookList";
 import AddBooks from "./components/AddBooks";
@@ -7,6 +8,7 @@ function App() {
   return (
     <Router>
     <div className="container">
+    <h1 className='title'>WEB PERPUSTAKAAN</h1>
       <div className="columns">
         <div className="column is-half is-offset-one-quarter">
           <Switch>

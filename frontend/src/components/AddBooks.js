@@ -15,7 +15,7 @@ const AddBooks = () => {
             title: title,
             author: author,
             year: year,
-            avaibility: avaibility
+            avaibility: 'true'
         });
         history.push("/");
     }
@@ -24,7 +24,7 @@ const AddBooks = () => {
         <div>
             <form onSubmit = {saveBooks}>
                 <div className = "field">
-                    <label className = "label">Title</label>
+                    <label className = "label mr">Title</label>
                     <input
                         className = "input"
                         type = "text"
@@ -56,7 +56,7 @@ const AddBooks = () => {
                     />
                 </div>
 
-                <div className = "field">
+                {/* <div className = "field">
                     <label className = "label">Availability</label>
                     <input
                         className = "input"
@@ -76,7 +76,7 @@ const AddBooks = () => {
                         onChange = { (e) => setAvailability(e.target.value) }
                     />
                     <label htmlFor="false">No</label>
-                </div>
+                </div> */}
 
                 <div className="field">
                     <button className="button is-primary">Save</button>

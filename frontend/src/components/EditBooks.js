@@ -79,7 +79,7 @@ const EditBooks = () => {
                         value = { true }
                         onChange = { (e) => setAvailability(e.target.value) }
                     />
-                    <label htmlFor="true">Yes</label><br/>
+                    <label htmlFor="true">Yes</label>
                     <input
                         className = "input"
                         name = "false"
