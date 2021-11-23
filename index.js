@@ -1,12 +1,20 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-
+const Books = require('./app/routes/book.routes')
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(bodyParser.json())
+app.use(cors())
+
+app.use((req,res,next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    next()
+})
 
 const db = require('./app/models/')
 db.mongoose
@@ -25,7 +33,7 @@ app.get('/', (req, res) => {
     res.send(`selamat datang`)
 })
 
-require('./app/routes/book.routes')(app)
+app.use('/books', Books);
 
 const PORT = 8000
 
