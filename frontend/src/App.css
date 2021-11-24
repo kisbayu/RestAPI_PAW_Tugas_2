@@ -6,3 +6,8 @@
   padding: 50px;
   text-align: center;
 }
+
+.column{
+  align-items: center;
+  flex-wrap: unwrap;
+}

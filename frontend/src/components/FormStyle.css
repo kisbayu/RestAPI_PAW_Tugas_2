@@ -1,0 +1,104 @@
+.title{
+    padding: 50px;
+    text-align: center;
+  }
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    display: table;
+}
+
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+  }
+
+form{
+    display: flex;
+    justify-content: center;
+}
+  
+.field{
+    display: table-row;
+}
+
+label,input{
+    display: table-cell;
+}
+
+.label{
+    align-items: stretch;
+}
+
+.availability{
+    display:inline-table;
+    align-content: stretch;
+}
+
+
+.availability.field{
+    display: table-row;
+}
+
+.input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+  }
+
+.editButton {
+    appearance: none;
+    background-color: #60b1ca;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .editButton:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .editButton:hover {
+    background-color: #3c89a0;
+  }
+  
+  .editButton:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .editButton:disabled {
+    background-color: #60b1ca;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .editButton:active {
+    background-color: #3c89a0;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }

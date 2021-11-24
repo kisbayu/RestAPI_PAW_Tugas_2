@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import axios from "axios";
 import { useHistory } from 'react-router-dom';
+import './FormStyle.css';
 
 const AddBooks = () => {
     const [title, setTitle] = useState('');
@@ -22,7 +23,9 @@ const AddBooks = () => {
 
     return (
         <div>
+            <h1 className = "title">TAMBAH DATA BUKU</h1>
             <form onSubmit = {saveBooks}>
+                <ul>
                 <div className = "field">
                     <label className = "label mr">Title</label>
                     <input
@@ -55,32 +58,10 @@ const AddBooks = () => {
                         onChange = { (e) => setYear(e.target.value) }
                     />
                 </div>
-
-                {/* <div className = "field">
-                    <label className = "label">Availability</label>
-                    <input
-                        className = "input"
-                        name = "true"
-                        type = "radio"
-                        id = "true"
-                        value = { true }
-                        onChange = { (e) => setAvailability(e.target.value) }
-                    />
-                    <label htmlFor="true">Yes</label><br/>
-                    <input
-                        className = "input"
-                        name = "false"
-                        type = "radio"
-                        id = "false"
-                        value = { false }
-                        onChange = { (e) => setAvailability(e.target.value) }
-                    />
-                    <label htmlFor="false">No</label>
-                </div> */}
-
                 <div className="field">
-                    <button className="button is-primary">Save</button>
+                    <button className="editButton">Tambah Data</button>
                 </div>
+                </ul>
             </form>
 
         </div>

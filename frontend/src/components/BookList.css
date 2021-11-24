@@ -1,3 +1,8 @@
+.title{
+    padding: 50px;
+    text-align: center;
+  }
+
 .button-4 {
   appearance: none;
   background-color: #a2f0bc;
@@ -8,12 +13,12 @@
   color: #24292E;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   list-style: none;
   padding: 6px 16px;
+  margin-bottom: 20px;
   position: relative;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   user-select: none;
@@ -65,11 +70,11 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
+  margin-left: 10px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -103,5 +108,55 @@
 
 .deleteButton:active {
   background-color: #972c2c;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.editButton {
+  appearance: none;
+  background-color: #60b1ca;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.editButton:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.editButton:hover {
+  background-color: #3c89a0;
+}
+
+.editButton:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.editButton:disabled {
+  background-color: #60b1ca;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.editButton:active {
+  background-color: #3c89a0;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }

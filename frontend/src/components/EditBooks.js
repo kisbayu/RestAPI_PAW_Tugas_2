@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import axios from "axios";
 import { useHistory, useParams } from 'react-router-dom';
+import './FormStyle.css';
 
 const EditBooks = () => {
     const [title, setTitle] = useState('');
@@ -35,7 +36,9 @@ const EditBooks = () => {
 
     return (
         <div>
+            <h1 className = "title">UBAH DATA BUKU</h1>
             <form onSubmit = {updateBooks}>
+                <ul>
                 <div className = "field">
                     <label className = "label">Title</label>
                     <input
@@ -71,29 +74,31 @@ const EditBooks = () => {
 
                 <div className = "field">
                     <label className = "label">Availability</label>
-                    <input
-                        className = "input"
-                        name = "true"
-                        type = "radio"
-                        id = "true"
-                        value = { true }
-                        onChange = { (e) => setAvailability(e.target.value) }
-                    />
-                    <label htmlFor="true">Yes</label>
-                    <input
-                        className = "input"
-                        name = "false"
-                        type = "radio"
-                        id = "false"
-                        value = { false }
-                        onChange = { (e) => setAvailability(e.target.value) }
-                    />
-                    <label htmlFor="false">No</label>
+                    <div className = "availability">
+                        <input
+                            className = "radio"
+                            name = "availability"
+                            type = "radio"
+                            id = "true"
+                            value = { true }
+                            onChange = { (e) => setAvailability(e.target.value) }
+                        />
+                        <label htmlFor="true">Yes</label>
+                        <input
+                            className = "radio"
+                            name = "availability"
+                            type = "radio"
+                            id = "false"
+                            value = { false }
+                            onChange = { (e) => setAvailability(e.target.value) }
+                        />
+                        <label htmlFor="false">No</label>
+                    </div>
                 </div>
-
                 <div className="field">
-                    <button className="button is-primary">Save</button>
+                    <button className="editButton">Simpan</button>
                 </div>
+                </ul>
             </form>
 
         </div>

@@ -8,9 +8,8 @@ function App() {
   return (
     <Router>
     <div className="container">
-    <h1 className='title'>WEB PERPUSTAKAAN</h1>
-      <div className="columns">
-        <div className="column is-half is-offset-one-quarter">
+      <div className="column">
+        <div>
           <Switch>
             <Route exact path="/">
               <BookList />

@@ -22,6 +22,7 @@ const BookList = () => {
 
     return (
         <div>
+            <h1 className = "title">DATA PEMINJAMAN BUKU</h1>
             <Link to="/add" className="button-4">Masukkan Data Buku Baru</Link>
             <table className="table is-striped is-fullwidth">
                 <thead>
@@ -41,7 +42,9 @@ const BookList = () => {
                             <td>{ book.year }</td>
                             <td>{ book.avaibility.toString() == 'true' ? 'YES' : 'NO' }</td>
                             <td>
-                                <Link to={`/edit/${book.id}`} className="button is-small is-info">Edit</Link>
+                                <button onClick={(e) => {
+                                    e.preventDefault(e);
+                                    window.location.href=`/edit/${book.id}`}} className="editButton">Edit</button>
                                 <button onClick={ () => deleteBook(book.id) } className="deleteButton">Delete</button>
                             </td>
                         </tr>
