@@ -7,7 +7,6 @@ const AddBooks = () => {
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [year, setYear] = useState('');
-    const [avaibility, setAvailability] = useState(Boolean);
     const history = useHistory();
 
     const saveBooks = async (e) => {
@@ -25,7 +24,7 @@ const AddBooks = () => {
         <div>
             <h1 className = "title">TAMBAH DATA BUKU</h1>
             <form onSubmit = {saveBooks}>
-                <ul>
+                <div className="container text-left">
                 <div className = "field">
                     <label className = "label mr">Title</label>
                     <input
@@ -60,8 +59,11 @@ const AddBooks = () => {
                 </div>
                 <div className="field">
                     <button className="editButton">Tambah Data</button>
+                    <button onClick={(e) => {
+                                    e.preventDefault(e);
+                                    window.location.href=`/`}} className="deleteButton">Batal</button>
                 </div>
-                </ul>
+                </div>
             </form>
 
         </div>

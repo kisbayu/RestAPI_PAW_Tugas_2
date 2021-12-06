@@ -38,7 +38,7 @@ const EditBooks = () => {
         <div>
             <h1 className = "title">UBAH DATA BUKU</h1>
             <form onSubmit = {updateBooks}>
-                <ul>
+                <div className="container text-left">
                 <div className = "field">
                     <label className = "label">Title</label>
                     <input
@@ -85,7 +85,7 @@ const EditBooks = () => {
                         />
                         <label htmlFor="true">Yes</label>
                         <input
-                            className = "radio"
+                            className = "checkbox"
                             name = "availability"
                             type = "radio"
                             id = "false"
@@ -97,8 +97,11 @@ const EditBooks = () => {
                 </div>
                 <div className="field">
                     <button className="editButton">Simpan</button>
+                    <button onClick={(e) => {
+                                    e.preventDefault(e);
+                                    window.location.href=`/`}} className="deleteButton">Batal</button>
                 </div>
-                </ul>
+                </div>
             </form>
 
         </div>
