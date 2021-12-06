@@ -11,12 +11,12 @@ const BookList = () => {
     }, []);
 
     const getBooks = async () => {
-        const response = await axios.get('http://localhost:8000/books');
+        const response = await axios.get('https://paw-kel14-api.herokuapp.com/books');
         setBook(response.data);
     }
 
     const deleteBook = async (id) => {
-        await axios.delete(`http://localhost:8000/books/${id}`);
+        await axios.delete(`https://paw-kel14-api.herokuapp.com/books/${id}`);
         getBooks();
     }
 
@@ -40,7 +40,7 @@ const BookList = () => {
                             <td>{ index + 1 }</td>
                             <td>{ book.title }</td>
                             <td>{ book.year }</td>
-                            <td>{ book.avaibility.toString() == 'true' ? 'YES' : 'NO' }</td>
+                            <td>{ book.avaibility.toString() === 'true' ? 'YES' : 'NO' }</td>
                             <td>
                                 <button onClick={(e) => {
                                     e.preventDefault(e);

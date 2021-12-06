@@ -13,7 +13,7 @@ const EditBooks = () => {
 
     const updateBooks = async (e) => {
         e.preventDefault();
-        await axios.put(`http://localhost:8000/books/${id}`,{
+        await axios.put(`https://paw-kel14-api.herokuapp.com/books/${id}`,{
             title: title,
             author: author,
             year: year,
@@ -27,7 +27,7 @@ const EditBooks = () => {
     }, []);
 
     const getBookByID = async () => {
-        const response = await axios.get(`http://localhost:8000/books/${id}`);
+        const response = await axios.get(`https://paw-kel14-api.herokuapp.com/books/${id}`);
         setTitle(response.data.title);
         setAuthor(response.data.author);
         setYear(response.data.year);

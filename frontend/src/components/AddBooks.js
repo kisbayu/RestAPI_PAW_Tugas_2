@@ -11,7 +11,7 @@ const AddBooks = () => {
 
     const saveBooks = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:8000/books',{
+        await axios.post('https://paw-kel14-api.herokuapp.com/books',{
             title: title,
             author: author,
             year: year,
