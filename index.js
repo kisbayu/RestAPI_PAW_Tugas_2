@@ -16,7 +16,7 @@ app.use((req,res,next) => {
     next()
 })
 
-const db = require('./app/models/')
+const db = require('./app/models/Index')
 db.mongoose
     .connect(db.url, {
         useNewUrlParser : true,
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 app.use('/books', Books);
 
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 
 app.listen(PORT, ()  =>{
     console.log(`server is running on http://localhost:${PORT}`)
